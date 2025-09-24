@@ -10,3 +10,24 @@ h1 {
 p {
   color: #666;
 }
+
+/* 去掉默认的 ul 列表样式 */
+nav ul {
+  list-style: none;       /* 去掉圆点 */
+  padding: 0;             /* 去掉默认内边距 */
+  margin: 0;              /* 去掉默认外边距 */
+  display: flex;          /* 横向排列 li */
+  gap: 20px;              /* li 之间的间距，可调整 */
+}
+
+/* 链接样式 */
+nav ul li a {
+  text-decoration: none;  /* 去掉下划线 */
+  color: #333;            /* 文字颜色 */
+  font-weight: bold;
+}
+
+/* 鼠标悬停效果 */
+nav ul li a:hover {
+  color: #007bff;
+}
