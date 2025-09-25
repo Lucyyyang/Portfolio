@@ -1,33 +1,142 @@
+
+/* ---------------------------主要框架----------------------------- */
 body {
-  background-color: #f0f0f0;
+  background-color: #f0f0f0; /*浅灰色*/
   font-family: Arial, sans-serif;
 }
 
-h1 {
+/* 容器：固定宽度 + 居中 */
+.container {
+  width: 1500px;        /* 固定宽度 */
+  max-width: 1500x;    /* 不超过 */
+  min-width: 1200px;    /* 不小于 */
+  margin: 0 auto;       /* 水平居中 */
+  padding: 20px;        /* 内边距，让文字不贴边 */
+  box-sizing: border-box; /* padding 包含在宽度内 */
+}
+
+/* footer 样式 */
+footer {
+  height: 50px;
+  line-height: 300px;   /* 文字垂直居中 */
+  background-color: ; /* 苹果绿  #9BD156 */
+  text-align: center;
+}
+
+/* ----------------------------普遍文字/标题------------------------------ */
+
+ /* 大标题居中 */
+.main-header {
+  font-family: Serif;
+  font-size: 25px;   /* 标题变大 */
+  display: flex;            /*  变成 flex 容器 */
+  flex-direction: column;   /* 让 h1 和 nav 纵向排列 */
+  align-items: center;      /* 居中对齐 */
+}
+
+h2 {
   color: #333;
+  text-align: center; 
+  justify-content: center;  /* 水平居中 */
 }
 
 p {
   color: #666;
 }
-
-/* 去掉默认的 ul 列表样式 */
-nav ul {
-  list-style: none;       /* 去掉圆点 */
-  padding: 0;             /* 去掉默认内边距 */
-  margin: 0;              /* 去掉默认外边距 */
-  display: flex;          /* 横向排列 li */
-  gap: 20px;              /* li 之间的间距，可调整 */
+/* --------------Home page ----------------------*/
+.about-home  {
+  text-align: center;
+  height: 50px;
+  line-height: 200px;   /* 文字垂直居中 */	
 }
 
-/* 链接样式 */
-nav ul li a {
-  text-decoration: none;  /* 去掉下划线 */
-  color: #333;            /* 文字颜色 */
-  font-weight: bold;
+
+
+/* --------------About me page----------------------*/
+.about-info {
+  text-align: center;
+  line-height: 200px;   /* 文字垂直居中 */
 }
 
-/* 鼠标悬停效果 */
-nav ul li a:hover {
-  color: #007bff;
+.about-contact {
+  height: 10px;
+  text-align: center;
+  line-height: 100px;   /* 文字垂直居中 */
+}
+
+/* --------------Plush design----------------------*/
+.plush-info {
+  text-align: center;
+  line-height: 200px;   /* 文字垂直居中 */
+}
+
+
+
+/* ------------------主菜单基础样式------------------ */
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;  /* 水平居中 */
+  gap: 50px;               /* 菜单间距 */
+  background-color: #f0f0f0;
+}
+
+.main-nav li {
+  position: relative;       /* 为下拉菜单定位 */
+}
+
+.main-nav a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+}
+
+.main-nav a:hover {
+  color: #9BD156;           /* 鼠标悬浮颜色 */
+}
+
+/* ------------------下拉菜单样式------------------ */
+
+.main-nav li.dropdown > .dropdown-menu {
+  display: none;               /* 默认隐藏 */
+  position: absolute;
+  top: 100%;                   /* 放在父元素下方 */
+  left: 50%;                   /* 先移动到父元素中心 */
+  transform: translateX(-50%) translateY(-10px); /* 水平居中 + 初始轻微上移 */
+  background-color: rgba(240, 240, 240, 0.95); /* 半透明背景 */
+  min-width: 160px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  padding: 0;
+  margin: 0;
+  opacity: 0;                  /* 隐藏前透明度 */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+/* 鼠标悬浮父菜单显示下拉 */
+.main-nav li.dropdown:hover > .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0); /* 平滑下拉 */
+}
+
+/* 下拉菜单链接样式 */
+.dropdown-menu li a {
+  padding: 10px;
+  color: black;
+  display: block;
+  text-align: center; /* 链接文字居中 */
+}
+
+.dropdown-menu li a:hover {
+  background-color: rgba(200,200,200,0.3);/* 半透明悬浮效果 */
+}
+
+/* 主菜单文字加粗，但不影响下拉菜单 */
+.main-nav > ul > li > a {
+  font-weight: bold;   /* 或 font-weight: 700 */
 }
