@@ -1,0 +1,12 @@
+
+
+/* --------------Plush design----------------------*/
+img {
+  width: 500px;       /* 宽度 */
+  height: auto;       /* 高度自动按比例 */
+  border-radius: 10px; /* 圆角，可选 */
+  margin-top: 110px;    /* 上下位置 */
+  margin-left: 10px;   /* 左右位置 */
+}
+
+}
