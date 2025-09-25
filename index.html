@@ -8,51 +8,47 @@
   <!-- 外部 CSS 文件 -->
   <link rel="stylesheet" href="style.css">
 </head>
+
+
 <body>
+  <div class="container">  
   
   <!-- 页眉 -->
-  <header>
-    <h1>My Portfolio</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+  <header class="main-header">
+    <h1>Portfolio</h1>
+  </header>	
+  
+<nav class="main-nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li class="dropdown">
+      <a href="projects.html">Projects</a>
+      <ul class="dropdown-menu">
+        <li><a href="plush.html">Plush design</a></li>
+        <li><a href="design.html">Graphic design</a></li>
+        <li><a href="photography.html">Photography</a></li>
+		<li><a href="sketch.html">Sketch</a></li>
       </ul>
-    </nav>
-  </header>
+    </li>
+    <li><a href="about.html">About Me</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+  </ul>
+</nav>
+
+
+  <!-- 作品集简介/ -->
+<section class="about-home">
+  <p>This is a longer introduction paragraph to test if the text alignment is really centered.</p>
+</section>
   
-  <!-- 关于我 -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Write a short introduction about yourself here.</p>
-  </section>
+
   
-  <!-- 项目展示 -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-list">
-      <div class="project">
-        <h3>Project 1</h3>
-        <p>Description of project 1.</p>
-      </div>
-      <div class="project">
-        <h3>Project 2</h3>
-        <p>Description of project 2.</p>
-      </div>
-    </div>
-  </section>
-  
-  <!-- 联系方式 -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: yourname@example.com</p>
-  </section>
+
   
   <!-- 页脚 -->
   <footer>
-    <p>&copy; 2025 Your Name. All rights reserved.</p>
+    <p>要写点什么吗？</p>
   </footer>
-
+  <div>
 </body>
 </html>
